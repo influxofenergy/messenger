@@ -1,0 +1,48 @@
+.Root {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.Input {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  padding: 0 12px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Input:focus {
+  border-color: rgba(92, 138, 255, 0.5);
+}
+
+.Button {
+  border-radius: 12px;
+  height: 44px;
+  padding: 0 16px;
+  min-width: 140px;
+  background: rgba(92, 138, 255, 0.75);
+  border: 1px solid rgba(92, 138, 255, 0.9);
+  color: #061022;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+.Button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+

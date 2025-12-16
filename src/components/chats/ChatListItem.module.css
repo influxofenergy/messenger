@@ -1,0 +1,101 @@
+.Root {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+
+.Root:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.Selected {
+  background: rgba(92, 138, 255, 0.14);
+  border-color: rgba(92, 138, 255, 0.35);
+}
+
+.Avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(92, 138, 255, 0.24);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.AvatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Body {
+  min-width: 0;
+  flex: 1;
+}
+
+.TopRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.Title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Time {
+  font-size: 12px;
+  opacity: 0.6;
+  flex: none;
+}
+
+.PreviewRow {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.Unread {
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #e9eef6;
+  background: rgb(35, 55, 95);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.Preview {
+  font-size: 13px;
+  opacity: 0.75;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+

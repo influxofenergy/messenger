@@ -1,0 +1,30 @@
+.Root {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  background: #0b0d10;
+  color: #e9eef6;
+}
+
+.Left {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0e1116;
+  overflow: hidden;
+}
+
+.Right {
+  overflow: hidden;
+  background: #0b0d10;
+}
+
+@media (max-width: 860px) {
+  .Root {
+    grid-template-columns: 1fr;
+  }
+
+  .Left {
+    border-right: none;
+  }
+}
+
+

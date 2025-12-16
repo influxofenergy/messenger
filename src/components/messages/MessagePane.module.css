@@ -1,0 +1,238 @@
+.Root {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 0;
+  position: relative;
+}
+
+.Header {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.BackButton {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  margin: -6px 0 -6px -6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.BackButton:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.HeaderAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(92, 138, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.HeaderAvatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.HeaderTitle {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.HeaderCount {
+  font-weight: 600;
+  opacity: 0.6;
+  flex: none;
+}
+
+.Body {
+  overflow: hidden;
+  padding: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.Messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Placeholder {
+  opacity: 0.7;
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.EmptyState {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.EmptyCard {
+  width: min(520px, 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  text-align: center;
+}
+
+.EmptyIcon {
+  width: 44px;
+  height: 44px;
+  color: rgba(92, 138, 255, 0.9);
+  margin-bottom: 10px;
+}
+
+.EmptyTitle {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.25;
+  cursor: default;
+  position: relative;
+  top: -1px;
+}
+
+
+.LoaderWrap {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.Spinner {
+  width: 44px;
+  height: 44px;
+  color: rgba(92, 138, 255, 0.9);
+  animation: spinner-rotate 700ms linear infinite;
+}
+
+.SpinnerCircle {
+  opacity: 0.25;
+}
+
+.SpinnerArc {
+  opacity: 0.9;
+}
+
+@keyframes spinner-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+
+.NewMessagesBadge {
+  position: absolute;
+  left: 50%;
+  top: -52px;
+  z-index: 3;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  pointer-events: none;
+  transition: opacity 120ms ease-out, transform 120ms ease-out;
+}
+
+.NewMessagesBadgeVisible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.NewMessagesButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0px solid rgb(52, 82, 150);
+  background: rgb(35, 55, 95);
+  color: #e9eef6;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.NewMessagesButton:hover {
+  background: rgb(42, 66, 112);
+}
+
+.ArrowIcon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  opacity: 0.9;
+  position: relative;
+  top: 1px;
+}
+
+.ActiveDate {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.ActiveDatePill {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.DateSeparator {
+  visibility: hidden;
+}
+
+@media (max-width: 860px) {
+  .Body {
+    padding-left: 8px;
+    padding-right: 8px;
+    overflow-x: hidden;
+  }
+}
